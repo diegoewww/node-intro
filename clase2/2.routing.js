@@ -35,7 +35,7 @@ const processRequest = (req, res) => {
 
         default:
           res.statusCode = 404
-          res.setHeader('Content-Type', 'text/plain; charset=utf-8')
+          res.setHeader('content-type', 'text/plain; charset=utf-8')
           return res.end('404 Not Found')
       }
   }
@@ -43,6 +43,6 @@ const processRequest = (req, res) => {
 
 const server = http.createServer(processRequest)
 
-server.listen(12345, () => {
-  console.log('Server running on port http://localhost:12345 ')
+server.listen(1234, () => {
+  console.log('Server running on port http://localhost:1234')
 })
