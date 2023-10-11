@@ -1,6 +1,4 @@
 const http = require('node:http')
-// const fs = require('node:fs')
-// const { ditto } = require('./pokemon/ditto')
 const dittoJSON = require('./pokemon/ditto.json')
 
 const processRequest = (req, res) => {
@@ -32,7 +30,6 @@ const processRequest = (req, res) => {
           })
           break
         }
-
         default:
           res.statusCode = 404
           res.setHeader('content-type', 'text/plain; charset=utf-8')
